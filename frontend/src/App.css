@@ -1,0 +1,866 @@
+/* ========================================
+   NAVIGATION BAR STYLES
+   - Brand logo styling and responsive sizing
+   - Navigation link effects and animations
+   - Button variations for different sections
+======================================== */
+.navbar-brand img {
+  height: auto;
+  width: 120px; /* Adjust the width as needed */
+  object-fit: contain;
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+/* Animated underline effect for navigation links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #0d6efd !important;
+}
+
+/* Primary and secondary button styles */
+.btn1 {
+  background-color: #0d6efd;
+  color: white;
+  border: 1px solid #0d6efd;
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: transparent;
+  color: #0d6efd;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #0d6efd;
+  border: 1px solid #0d6efd;
+}
+
+.btn-secondary:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE NAVIGATION
+   - Mobile, tablet and desktop optimizations
+   - Scalable logo and button sizes
+======================================== */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  .navbar-brand img {
+    width: 100px;
+  }
+  .btn1, .btn-secondary {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1.25rem;
+  }
+  .navbar {
+    padding: 1rem 0;
+  }
+}
+
+/* ========================================
+   HERO SLIDER SECTION
+   - Full viewport height background styling
+   - Responsive hero image display
+======================================== */
+.slider-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;          
+  min-height: 500px;      
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   - General purpose icon and color utilities
+======================================== */
+.ic {
+  color: #facc15;
+  font-size: 1.3rem;
+}
+
+/* ========================================
+   SERVICES SECTION
+   - Service cards with hover animations
+   - Background gradients and transitions
+======================================== */
+.services-bg {
+  background: linear-gradient(to right, #f8fafc, #e0f2fe);
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: #0d6efd;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animated bounce effect for service icons */
+.bounce-icon:hover {
+  animation: bounce 0.8s ease;
+}
+
+/* Keyframe animation for bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   - Customer feedback cards styling
+   - Hover effects and profile image styling
+======================================== */
+.testimonial-bg {
+  background: linear-gradient(to right, #f8f9fa, #e0f7fa);
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Quote icon positioning */
+.quote-icon {
+  top: -20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Circular profile images for testimonials */
+.testimonial-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #0d6efd;
+}
+
+/* ========================================
+   PROPERTY LISTINGS SECTION
+   - Property cards with image hover effects
+   - Card content styling and spacing
+======================================== */
+.property-section {
+  background: linear-gradient(to right, #f8fafc, #e0f2fe);
+}
+
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.featuredimg {
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .featuredimg {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem 1.3rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ========================================
+   AMENITIES SECTION STYLING
+   - Feature icons with hover animations
+   - Grid layout for amenity cards
+======================================== */
+
+.aminities_flex {
+  flex-wrap: wrap;
+}
+
+/* Individual amenity card styling */
+
+.amenity-card {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.amenity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-color: #e0e0e0;
+}
+
+.amenity-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+}
+
+/* ---------- ARROW BUTTON STYLE ---------- */
+.arrow-btn {
+  background-color: #f0f0f0;
+  color: #333;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+/* ---------- FOOTER SECTION ---------- */
+.footer {
+  background-color: #1f1f2e;
+  color: #ccc;
+}
+
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  font-size: 0.95rem;
+}
+
+.subscribe-input {
+  background-color: #2b2b3a;
+  border: none;
+  color: #fff;
+}
+
+.subscribe-input::placeholder {
+  color: #999;
+}
+
+.footer-bottom a:hover {
+  color: #00d4ff;
+}
+
+.payment-icons img {
+  max-width: 180px;
+}
+
+/* ========================================
+   CARD & FORM STYLING
+   - General card styling with hover effects
+   - Input groups and form controls
+======================================== */
+.card {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-group-text {
+  border: none;
+  font-size: 1.1rem;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.hoverbtn:hover {
+  background-color: #0056b3 !important;
+  color: #fff !important;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #084298;
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.4);
+}
+
+/* ========================================
+   TOP NAVIGATION BAR
+   - Contact info and social media links
+   - Gradient background with hover effects
+======================================== */
+.topbar-bg {
+  background: linear-gradient(to right, #1f2937, #111827);
+  font-size: 0.9rem;
+  z-index: 1030;
+}
+
+.top-icon {
+  color: #facc15;
+  font-size: 1rem;
+}
+
+.social-icons .social-icon {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons .social-icon:hover {
+  color: #facc15;
+  transform: scale(1.1);
+}
+
+/* ========================================
+   GLOBAL BODY & UTILITY CLASSES
+   - Brand colors and spacing utilities
+   - Component-specific color overrides
+======================================== */
+body {
+  overflow-x: hidden !important;
+}
+
+.topbar {
+  height: 30px;
+}
+
+.mycolor {
+  background-color: #0B2C3D;
+}
+
+.btncolor {
+  color: #FF5A3C;
+}
+
+.bggcolor {
+  background-color: #FF5A3C;
+}
+
+.button {
+  height: 30px;
+  width: 150px;
+}
+
+.pdd {
+  padding-right: 100px;
+}
+
+.navbarcl {
+  background-color: #e0f7fa;
+}
+
+/* ---------- CART ICON ---------- */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 5px;
+}
+
+/* ========================================
+   LOGO & BRANDING ELEMENTS
+   - Company logo styling and fonts
+   - Brand color applications
+======================================== */
+.font {
+  color: #0B2C3D;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* ========================================
+   HERO SLIDER CONTENT
+   - Text overlays and positioning
+   - Color themes and responsive sizing
+======================================== */
+.slider {
+  height: 450px;
+}
+
+.sliderdiv {
+  padding-top: 100px;
+  padding-left: 60px;
+  color: white;
+}
+
+.mycolor1 {
+  color: #FF5A3C;
+}
+
+.mycolor2 {
+  color: #1b1e34;
+}
+
+.sliderp {
+  border-left: 2px solid black;
+  padding-left: 10px;
+}
+
+.sliderimg {
+  height: 450px;
+}
+
+/* ---------- PROPERTY & FEATURES ---------- */
+.property {
+  min-height: 300px;
+}
+
+.featuredp {
+  color: grey;
+}
+
+.featuredimg {
+  height: 220px;
+}
+
+/* ========================================
+   EXTENDED AMENITIES STYLING  
+   - Circular icons with color themes
+   - Interactive card buttons with positioning
+======================================== */
+.cardic {
+  height: 80px;
+  width: 75px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0px auto;
+  font-size: 35px;
+  background: #FFCCBC;
+  border-radius: 50%;
+  padding: 5px;
+  color: #E65100;
+}
+
+.boxbtn {
+  position: relative;
+}
+
+.cardbtn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  bottom: -30px;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #ffffff;
+  left: 100px;
+}
+
+/* ========================================
+   TESTIMONIAL BACKGROUND & IMAGES
+   - Hero background with property images
+   - Circular profile image styling
+======================================== */
+.background {
+  background-image: url("/img/20.jpg copy.jpeg");
+  background-size: 100%;
+}
+
+.feedimg {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-left: 30px;
+}
+
+.color1 {
+  color: #6c757d;
+  font-size: 10px;
+}
+
+
+/* counter background  */
+.counter-bg {
+  background: linear-gradient(to right, #f8fafc, #e0f2fe);
+}
+
+.About-section {
+  background: linear-gradient(to right, #f8fafc, #e0f2fe);
+}
+
+/* ---------- FOOTER STYLES ---------- */
+.footer-container {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #0d6efd;
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #0d6efd;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px 0 0 5px;
+  background-color: #2c2c3e;
+  color: #fff;
+}
+
+.newsletter-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: #0a58ca;
+}
+
+.payment-icons {
+  margin-top: 15px;
+}
+
+.footer-bottom {
+  background-color: #121220;
+  color: #aaa;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* ---------- FOOTER FINAL ---------- */
+.footer {
+  background-color: #0f1123;
+  padding: 50px 40px 30px;
+}
+
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer .footer-icon i {
+  color: #ccc;
+  margin-right: 10px;
+}
+
+/* ---------- REGISTRATION FORM ---------- */
+.form-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 77, 77, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-box:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+  color: #ff4d4d;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ff4d4d;
+}
+
+.btn-register {
+  color: white;
+  border: 1px solid #ff4d4d;
+}
+
+.btn-register:hover {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+/* ========================================
+   LOGIN & REGISTRATION FORMS
+   - User authentication form styling
+   - Focus states and hover effects
+======================================== */
+.login-box {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-title {
+  text-align: center;
+  color: #ff5733;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.form-control:focus {
+  border-color: #ff5733;
+  box-shadow: none;
+}
+
+.btn-login {
+  background-color: #ff4d4d;
+  border: 1px solid #ff4d4d;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3);
+}
+
+.btn-login:hover {
+  background-color: #ff5733 !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 87, 51, 0.4);
+}
+.bg {
+  background-color: #f8f9fa; /* light gray or your desired color */
+}
+
+/* ========================================
+   ADVANCED PROPERTY CARD ANIMATIONS
+   - Smooth hover transitions and transforms
+   - Enhanced button interactions with shadows
+======================================== */
+.property-card:hover {
+  transform: translateY(-12px) !important;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.08);
+}
+
+.property-card .property-image {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+}
+
+.property-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth button hover effects */
+.property-card .btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.property-card .btn:hover {
+  transform: translateY(-2px);
+}
+
+.property-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4) !important;
+  background: linear-gradient(135deg, #0056b3 0%, #003d82 100%) !important;
+}
+
+.property-btn-danger:hover {
+  box-shadow: 0 6px 20px rgba(220,53,69,0.4) !important;
+  background: linear-gradient(135deg, #c82333 0%, #a71e2a 100%) !important;
+}
