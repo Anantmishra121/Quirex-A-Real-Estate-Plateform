@@ -1,0 +1,1387 @@
+/* ========================================
+   NAVIGATION BAR STYLES
+   - Brand logo styling and responsive sizing
+   - Navigation link effects and animations
+   - Button variations for different sections
+======================================== */
+.navbar-brand img {
+  height: auto;
+  width: 120px; /* Adjust the width as needed */
+  object-fit: contain;
+}
+
+.navbar {
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+/* Animated underline effect for navigation links */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Primary and secondary button styles */
+.btn1 {
+  background-color: var(--primary-color);
+  color: white;
+  border: 1px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVE NAVIGATION
+   - Mobile, tablet and desktop optimizations
+   - Scalable logo and button sizes
+======================================== */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  .navbar-brand img {
+    width: 100px;
+  }
+  .btn1, .btn-secondary {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .navbar-toggler {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1.25rem;
+  }
+  .navbar {
+    padding: 1rem 0;
+  }
+}
+
+/* ========================================
+   HERO SLIDER SECTION
+   - Full viewport height background styling
+   - Responsive hero image display
+======================================== */
+.slider-bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;          
+  min-height: 500px;      
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   - General purpose icon and color utilities
+======================================== */
+.ic {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+/* ========================================
+   SERVICES SECTION
+   - Service cards with hover animations
+   - Background gradients and transitions
+======================================== */
+.services-bg {
+  background: linear-gradient(to right, var(--bg-lighter), var(--bg-off-white));
+}
+
+.service-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px var(--shadow-light);
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animated bounce effect for service icons */
+.bounce-icon:hover {
+  animation: bounce 0.8s ease;
+}
+
+/* Keyframe animation for bouncing effect */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+}
+
+/* ========================================
+   TESTIMONIALS SECTION
+   - Customer feedback cards styling
+   - Hover effects and profile image styling
+======================================== */
+.testimonial-bg {
+  background: linear-gradient(to right, var(--bg-lighter), var(--bg-light));
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px var(--shadow-light);
+}
+
+/* Quote icon positioning */
+.quote-icon {
+  top: -20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Circular profile images for testimonials */
+.testimonial-img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--primary-color);
+}
+
+/* ========================================
+   PROPERTY LISTINGS SECTION
+   - Property cards with image hover effects
+   - Card content styling and spacing
+======================================== */
+.property-section {
+  background: linear-gradient(to right, var(--bg-lighter), var(--bg-off-white));
+}
+
+.property-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px var(--shadow-medium);
+}
+
+.featuredimg {
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.property-card:hover .featuredimg {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 1rem 1.3rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+}
+
+.card-text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  line-height: 1.4;
+}
+
+/* ========================================
+   AMENITIES SECTION STYLING
+   - Feature icons with hover animations
+   - Grid layout for amenity cards
+======================================== */
+
+.aminities_flex {
+  flex-wrap: wrap;
+}
+
+/* Individual amenity card styling */
+
+.amenity-card {
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border-light);
+}
+
+.amenity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px var(--shadow-light);
+  border-color: var(--border-color);
+}
+
+.amenity-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* ---------- ARROW BUTTON STYLE ---------- */
+.arrow-btn {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+/* ---------- FOOTER SECTION ---------- */
+.footer {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+}
+
+.footer a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-links a {
+  font-size: 0.95rem;
+}
+
+.subscribe-input {
+  background-color: var(--primary-light);
+  border: none;
+  color: #fff;
+}
+
+.subscribe-input::placeholder {
+  color: var(--text-light);
+}
+
+.footer-bottom a:hover {
+  color: var(--secondary-color);
+}
+
+.payment-icons img {
+  max-width: 180px;
+}
+
+/* ========================================
+   CARD & FORM STYLING
+   - General card styling with hover effects
+   - Input groups and form controls
+======================================== */
+.card {
+  background-color: var(--bg-lighter);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px var(--shadow-light);
+}
+
+.input-group-text {
+  border: none;
+  font-size: 1.1rem;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.hoverbtn:hover {
+  background-color: var(--primary-dark) !important;
+  color: #fff !important;
+}
+
+/* ---------- GLOBAL STYLES ---------- */
+.object-fit-cover {
+  object-fit: cover;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  box-shadow: 0 0 10px rgba(30, 58, 95, 0.4);
+}
+
+/* ========================================
+   TOP NAVIGATION BAR
+   - Contact info and social media links
+   - Gradient background with hover effects
+======================================== */
+.topbar-bg {
+  background: linear-gradient(to right, var(--primary-dark), #0d1f3c);
+  font-size: 0.9rem;
+  z-index: 1030;
+}
+
+.top-icon {
+  color: var(--accent-color);
+  font-size: 1rem;
+}
+
+.social-icons .social-icon {
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons .social-icon:hover {
+  color: var(--accent-color);
+  transform: scale(1.1);
+}
+
+/* ========================================
+   GLOBAL BODY & UTILITY CLASSES
+   - Brand colors and spacing utilities
+   - Component-specific color overrides
+======================================== */
+body {
+  overflow-x: hidden !important;
+}
+
+.topbar {
+  height: 30px;
+}
+
+.mycolor {
+  background-color: var(--primary-color);
+}
+
+.btncolor {
+  color: var(--accent-color);
+}
+
+.bggcolor {
+  background-color: var(--accent-color);
+}
+
+.button {
+  height: 30px;
+  width: 150px;
+}
+
+.pdd {
+  padding-right: 100px;
+}
+
+.navbarcl {
+  background-color: var(--bg-light);
+}
+
+/* ---------- CART ICON ---------- */
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: var(--error-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  padding: 2px 5px;
+}
+
+/* ========================================
+   LOGO & BRANDING ELEMENTS
+   - Company logo styling and fonts
+   - Brand color applications
+======================================== */
+.font {
+  color: var(--primary-color);
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* ========================================
+   HERO SLIDER CONTENT
+   - Text overlays and positioning
+   - Color themes and responsive sizing
+======================================== */
+.slider {
+  height: 450px;
+}
+
+.sliderdiv {
+  padding-top: 100px;
+  padding-left: 60px;
+  color: white;
+}
+
+.mycolor1 {
+  color: var(--accent-color);
+}
+
+.mycolor2 {
+  color: var(--primary-dark);
+}
+
+.sliderp {
+  border-left: 2px solid black;
+  padding-left: 10px;
+}
+
+.sliderimg {
+  height: 450px;
+}
+
+/* ---------- PROPERTY & FEATURES ---------- */
+.property {
+  min-height: 300px;
+}
+
+.featuredp {
+  color: var(--text-light);
+}
+
+.featuredimg {
+  height: 220px;
+}
+
+/* ========================================
+   EXTENDED AMENITIES STYLING  
+   - Circular icons with color themes
+   - Interactive card buttons with positioning
+======================================== */
+.cardic {
+  height: 80px;
+  width: 75px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0px auto;
+  font-size: 35px;
+  background: var(--accent-light);
+  border-radius: 50%;
+  padding: 5px;
+  color: var(--accent-dark);
+}
+
+.boxbtn {
+  position: relative;
+}
+
+.cardbtn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--border-light);
+  border-radius: 50%;
+  bottom: -30px;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #ffffff;
+  left: 100px;
+}
+
+/* ========================================
+   TESTIMONIAL BACKGROUND & IMAGES
+   - Hero background with property images
+   - Circular profile image styling
+======================================== */
+.background {
+  background-image: url("/img/20.jpg copy.jpeg");
+  background-size: 100%;
+}
+
+.feedimg {
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  margin-left: 30px;
+}
+
+.color1 {
+  color: var(--text-light);
+  font-size: 10px;
+}
+
+
+/* counter background  */
+.counter-bg {
+  background: linear-gradient(to right, var(--bg-lighter), var(--bg-off-white));
+}
+
+.About-section {
+  background: linear-gradient(to right, var(--bg-lighter), var(--bg-off-white));
+}
+
+/* ---------- FOOTER STYLES ---------- */
+.footer-container {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 60px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  margin: 10px;
+}
+
+.footer-title {
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px 0 0 5px;
+  background-color: white;
+  color: #fff;
+}
+
+.newsletter-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-button:hover {
+  background-color: var(--primary-dark);
+}
+
+.payment-icons {
+  margin-top: 15px;
+}
+
+.footer-bottom {
+  background-color: #0a0f1a;
+  color: var(--text-light);
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+
+/* ---------- FOOTER FINAL ---------- */
+.footer {
+  background-color: var(--primary-dark);
+  padding: 50px 40px 30px;
+}
+
+.footer h5 {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.footer .footer-icon i {
+  color: var(--text-light);
+  margin-right: 10px;
+}
+
+/* ---------- REGISTRATION FORM ---------- */
+.form-box {
+  background: #fff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 32px var(--shadow-light);
+  border: 1px solid rgba(30, 58, 95, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.form-box:hover {
+  box-shadow: 0 12px 40px var(--shadow-medium);
+}
+
+h2 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.btn-register {
+  color: white;
+  border: 1px solid #ff4d4d;
+}
+
+.btn-register:hover {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+/* ========================================
+   LOGIN & REGISTRATION FORMS
+   - Modern, simple, and professional styling
+   - Clean form inputs with smooth interactions
+======================================== */
+
+/* Login wrapper and container */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 20px 60px var(--shadow-medium);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Login header */
+.login-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Input wrapper and styling */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--bg-lighter);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  padding: 0 14px;
+}
+
+.input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  background: var(--bg-off-white);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.input-icon {
+  color: var(--text-muted);
+  margin-right: 10px;
+  font-size: 16px;
+  flex-shrink: 0;
+  transition: color 0.3s ease;
+}
+
+.input-wrapper:focus-within .input-icon {
+  color: var(--primary-color);
+}
+
+.form-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  font-size: 14px;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+}
+
+.form-input.error {
+  color: var(--error-color);
+}
+
+/* Error message */
+.error-message {
+  font-size: 12px;
+  color: var(--error-color);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Login button */
+.btn-login {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-login:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(30, 58, 95, 0.6);
+}
+
+.btn-login:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Old login-box for backward compatibility */
+.login-box {
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 10px 20px var(--shadow-light);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(30, 58, 95, 0.25);
+}
+
+/* ========================================
+   REGISTRATION/SIGNUP FORMS
+   - Modern signup page styling with grid layout
+   - Responsive design for all screen sizes
+======================================== */
+
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  padding: 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.register-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 45px 40px;
+  box-shadow: 0 20px 60px var(--shadow-medium);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Register header */
+.register-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.register-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.register-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Registration form styling */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .register-card {
+    padding: 35px 25px;
+  }
+}
+
+/* File input special styling */
+.file-input .form-input {
+  cursor: pointer;
+}
+
+.file-input .form-input::file-selector-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* Register button */
+.btn-register {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.4);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.btn-register:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(30, 58, 95, 0.6);
+}
+
+.btn-register:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-register:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.bg {
+  background-color: var(--bg-lighter); /* light gray or your desired color */
+}
+
+/* ========================================
+   ADVANCED PROPERTY CARD ANIMATIONS
+   - Smooth hover transitions and transforms
+   - Enhanced button interactions with shadows
+======================================== */
+.property-card:hover {
+  transform: translateY(-12px) !important;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2) !important;
+}
+
+.property-card:hover .property-image {
+  transform: scale(1.08);
+}
+
+.property-card .property-image {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center center;
+}
+
+.property-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Smooth button hover effects */
+.property-card .btn {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.property-card .btn:hover {
+  transform: translateY(-2px);
+}
+
+.property-btn-primary:hover {
+  box-shadow: 0 6px 20px rgba(30, 58, 95, 0.4) !important;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #0d1f3c 100%) !important;
+}
+
+.property-btn-danger:hover {
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4) !important;
+  background: linear-gradient(135deg, var(--error-color) 0%, #c82333 100%) !important;
+}
+
+/* ========================================
+   CONTACT US FORM - COMPACT DESIGN
+   - Modern, efficient layout with 2-column grid
+   - Professional styling matching brand colors
+======================================== */
+
+.contact-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  padding: 30px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 40px 35px;
+  box-shadow: 0 20px 60px var(--shadow-medium);
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Contact header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.contact-subtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Contact form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Two-column row layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-full {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Form labels */
+.contact-form .form-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  display: none; /* Hide labels for compact form */
+}
+
+/* Form inputs - compact wrapper */
+.floating-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: var(--bg-lighter);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  padding: 0 12px 0 40px;
+}
+
+.floating-input-wrapper:focus-within {
+  border-color: var(--primary-color);
+  background: var(--bg-off-white);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.floating-input-wrapper .input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--primary-color);
+  font-size: 14px;
+  flex-shrink: 0;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.floating-input-wrapper:focus-within .input-icon {
+  color: var(--primary-dark);
+}
+
+/* Form inputs */
+.contact-form .form-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 12px 0;
+  font-size: 13px;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.contact-form .form-input::placeholder {
+  color: var(--text-light);
+}
+
+.contact-form .form-input.error {
+  color: var(--error-color);
+}
+
+.contact-form .form-input:focus::placeholder {
+  color: var(--text-muted);
+}
+
+/* Textarea styling */
+.form-textarea {
+  background: var(--bg-lighter);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background: var(--bg-off-white);
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+.form-textarea::placeholder {
+  color: var(--text-light);
+}
+
+.form-textarea.error {
+  border-color: var(--error-color);
+}
+
+/* Error messages */
+.contact-form .error-message {
+  font-size: 11px;
+  color: var(--error-color);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Input wrapper with icon */
+.contact-form .input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form .input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--primary-color);
+  font-size: 14px;
+  pointer-events: none;
+  transition: color 0.3s ease;
+}
+
+.contact-form .form-input:focus ~ .input-icon {
+  color: var(--primary-dark);
+}
+
+/* Submit button */
+.btn-contact {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  border: none;
+  padding: 11px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(30, 58, 95, 0.4);
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.btn-contact:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(30, 58, 95, 0.6);
+}
+
+.btn-contact:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-contact:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-title {
+    font-size: 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-form {
+    gap: 15px;
+  }
+}
